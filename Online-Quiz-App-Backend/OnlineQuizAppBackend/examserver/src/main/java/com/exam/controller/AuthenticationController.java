@@ -70,7 +70,7 @@ public class AuthenticationController {
 		}
 	}
 	
-	@GetMapping("/current-user")
+	@GetMapping("/current-users")
 	public User getCurrentUser(Principal principal) {
 		return (User)this.userDetailsServiceImpl.loadUserByUsername(principal.getName());
 	}
